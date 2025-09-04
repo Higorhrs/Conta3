@@ -8,6 +8,14 @@ public class Conta {
 	public Conta() {
 	}
 	
+	
+	
+	public Conta(double saldo) {
+		this.saldo = saldo;
+	}
+
+
+
 	public Conta(int numeroConta, String nomeTitular, double saldo) {
 		this.numeroConta = numeroConta;
 		this.nomeTitular = nomeTitular;
@@ -38,12 +46,16 @@ public class Conta {
 	public double getSaldo() {
 		return saldo;
 	}
-
+	
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+	
 	public String toString() {
 		return "Conta: " + numeroConta 
 				+ " - Titular: " 
 				+ nomeTitular 
-				+ " - Saldo R$" 
-				+ saldo;
+				+  String.format("Saldo R$%.2f", saldo);
 	}
+
 }
